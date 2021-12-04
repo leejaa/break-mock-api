@@ -13,7 +13,7 @@ module.exports = {
             ctx.throw(404);
         }
 
-        const entity = await strapi.services.article.create(ctx.request.body);
+        const entity = await strapi.services.comment.create(ctx.request.body);
         return sanitizeEntity(entity, { model: strapi.models.comment });
     },
     async find(ctx) {

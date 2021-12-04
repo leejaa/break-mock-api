@@ -2,7 +2,7 @@
   "routes": [
     {
       "method": "POST",
-      "path": "/articles/:postId/comments",
+      "path": "/articles/:articleId/comments",
       "handler": "comment.create",
       "config": {
         "policies": []
