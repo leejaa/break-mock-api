@@ -10,7 +10,7 @@
     },
     {
       "method": "GET",
-      "path": "articles/:articleId/comments",
+      "path": "/articles/:articleId/comments",
       "handler": "comment.find",
       "config": {
         "policies": []
