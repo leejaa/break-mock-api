@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "partners",
+  "info": {
+    "name": "partner",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "shop": {
+      "type": "string"
+    },
+    "shopEN": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "addressEN": {
+      "type": "string"
+    },
+    "latitude": {
+      "type": "float"
+    },
+    "longitude": {
+      "type": "float"
+    },
+    "postCode": {
+      "type": "integer"
+    },
+    "phoneNumber": {
+      "type": "string"
+    },
+    "linkCategory": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "city": {
+      "model": "city",
+      "via": "partners"
+    }
+  }
+}
