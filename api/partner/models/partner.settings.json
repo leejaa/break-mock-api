@@ -45,6 +45,9 @@
     },
     "postCode": {
       "type": "string"
+    },
+    "country": {
+      "type": "string"
     }
   }
 }
