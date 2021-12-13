@@ -22,7 +22,8 @@
       "type": "text"
     },
     "public": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": true
     }
   }
 }
