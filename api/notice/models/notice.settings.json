@@ -20,6 +20,11 @@
     },
     "content": {
       "type": "text"
+    },
+    "public": {
+      "type": "boolean",
+      "default": true,
+      "required": true
     }
   }
 }
