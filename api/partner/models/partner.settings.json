@@ -30,9 +30,6 @@
     "longitude": {
       "type": "float"
     },
-    "postCode": {
-      "type": "integer"
-    },
     "phoneNumber": {
       "type": "string"
     },
@@ -45,6 +42,9 @@
     "city": {
       "model": "city",
       "via": "partners"
+    },
+    "postCode": {
+      "type": "string"
     }
   }
 }
