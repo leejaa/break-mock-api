@@ -10,6 +10,14 @@
     },
     {
       "method": "GET",
+      "path": "/auth",
+      "handler": "payments.auth",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/payments/count",
       "handler": "payments.count",
       "config": {
