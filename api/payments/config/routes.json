@@ -17,6 +17,14 @@
       }
     },
     {
+      "method": "POST",
+      "path": "/api/kakaopay/ready",
+      "handler": "payments.ready",
+      "config": {
+        "policies": []
+      }
+    },
+    {
       "method": "GET",
       "path": "/payments/count",
       "handler": "payments.count",
