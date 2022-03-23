@@ -58,23 +58,19 @@ module.exports = {
         const { cid, partner_order_id, partner_user_id, item_name, quantity, total_amount, tax_free_amount, approval_url, cancel_url, fail_url } = ctx.request.body;
         console.log('ctx.request.body', ctx.request.body);
 
-        axios.post('https://kapi.kakao.com/v1/payment/ready', `cid=${cid}&partner_order_id=${partner_order_id}&item_name=${item_name}&quantity=${quantity}&total_amount=${total_amount}&tax_free_amount=${tax_free_amount}&approval_url=${approval_url}&cancel_url=${cancel_url}&fail_url=${fail_url}&partner_user_id=${partner_user_id}`, {
-            headers: {
-                Authorization: "KakaoAK 06a09830f8019c4a840d7731a3882f77",
-                "Content-Type": "application/x-www-form-urlencoded;charset=utf-8",     
-            }
-        }).then((response) => {
-            console.log('response', response.data);
-            
+        try {
+            const { data } = await axios.post('https://kapi.kakao.com/v1/payment/ready', `cid=${cid}&partner_order_id=${partner_order_id}&item_name=${item_name}&quantity=${quantity}&total_amount=${total_amount}&tax_free_amount=${tax_free_amount}&approval_url=${approval_url}&cancel_url=${cancel_url}&fail_url=${fail_url}&partner_user_id=${partner_user_id}`, {
+                headers: {
+                    Authorization: "KakaoAK 06a09830f8019c4a840d7731a3882f77",
+                    "Content-Type": "application/x-www-form-urlencoded;charset=utf-8",     
+                }
+            });
             return {
                 code: 200,
-                data: {
-                    
-                },
-                message: '성공',
+                data,
+                message: '실패',
             };
-        }).catch((error) => {
-            console.log('error', error);
+        } catch (error) {
             return {
                 code: 200,
                 data: {
@@ -82,14 +78,6 @@ module.exports = {
                 },
                 message: '실패',
             };
-        })
-
-        return {
-            code: 200,
-            data: {
-                
-            },
-            message: '결제준비',
-        };
+        }
     },
 };
