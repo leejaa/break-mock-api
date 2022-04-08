@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "prices",
+  "info": {
+    "name": "price"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "country": {
+      "type": "enumeration",
+      "enum": [
+        "kr",
+        "tw"
+      ]
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "active",
+        "inactive"
+      ]
+    },
+    "productType": {
+      "type": "enumeration",
+      "enum": [
+        "GRADING"
+      ]
+    },
+    "productName": {
+      "type": "enumeration",
+      "enum": [
+        "REGULAR",
+        "EXPRESS",
+        "REHOLDER"
+      ]
+    },
+    "productNumber": {
+      "type": "integer"
+    },
+    "supplyPrice": {
+      "type": "integer"
+    },
+    "discountRate": {
+      "type": "float"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "maximumQt": {
+      "type": "integer"
+    }
+  }
+}
