@@ -3,7 +3,7 @@ module.exports = {
       cors: {
         enabled: true,
         // origin: ['*']
-        origin: ['http://localhost:3000', 'http://localhost:1337', 'https://staging-brg.break.co.kr', 'https://staging-brg3.break.co.kr', 'https://break-mock-api.herokuapp.com']
+        origin: ['http://localhost:3000', 'http://localhost:1337', 'https://staging-brg.break.co.kr', 'https://staging-brg3.break.co.kr', 'https://break-mock-api.herokuapp.com', 'https://staging-admin.break.co.kr']
       },
     },
   };
