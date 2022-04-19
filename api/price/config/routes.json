@@ -33,6 +33,14 @@
       }
     },
     {
+      "method": "POST",
+      "path": "/api/admin/cost/policy/list",
+      "handler": "price.list",
+      "config": {
+        "policies": []
+      }
+    },
+    {
       "method": "PUT",
       "path": "/prices/:id",
       "handler": "price.update",
