@@ -2,6 +2,7 @@ const { sanitizeEntity } = require('strapi-utils');
 
 module.exports = {
     async list(ctx) {
+        
         return {
             "code": 0,
             "message": "OK",
